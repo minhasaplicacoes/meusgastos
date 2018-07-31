@@ -7,13 +7,23 @@
   <artifactId>meusgastos</artifactId>
   <packaging>pom</packaging>
   <version>1.0.0</version>
+
   <modules>
     <module>cartao-service</module>
-    <!--module>categoria-service</module>
+    <module>categoria-service</module>
     <module>despesa-service</module>
     <module>fatura-service</module>
-    <module>orcamento-service</module-->
+    <module>orcamento-service</module>
+    <module>meusgastos-gateway</module>
   </modules>
-  <profiles>
-  </profiles>
+  <properties>
+    <vertx.version>3.5.3</vertx.version>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+    <!--overridden in each project packaged as a fat jar -->
+    <main.verticle/>
+  </properties>
+
 </project>
